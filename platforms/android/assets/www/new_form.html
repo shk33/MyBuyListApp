@@ -44,8 +44,13 @@
               <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset ui-input-has-clear"><input type="text" name="item-name" id="item-name" value="" data-clear-btn="true" placeholder="Nombre"><a href="#" tabindex="-1" aria-hidden="true" class="ui-input-clear ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all waves-effect waves-button waves-effect waves-button ui-input-clear-hidden" title="Clear text">Clear text</a></div>
 
               <div class="nd2-card">
-                <div class="card-media">
-                  <img src="img/placeholder.jpg">
+                <div class="card-media" style="max-height:184px;overflow-y: hidden;" >
+                  <a href="#userimg-popup" 
+                    data-rel="popup" 
+                    data-position-to="window" 
+                    data-transition="pop">
+                      <img id="userimg" src="img/placeholder.jpg">
+                  </a>
                 </div>
               </div>
       
@@ -71,7 +76,7 @@
               <label for="notes">Notas:</label>
               <textarea cols="40" rows="8" name="notes" id="notes" placeholder="Notas del artículo" class="ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all ui-textinput-autogrow" style="height: 66px;"></textarea>
 
-              <button class="ui-btn ui-btn-raised ui-btn-inline clr-primary waves-effect waves-button waves-effect waves-button">Guardar Artículo &nbsp;<i class="zmdi zmdi-mail-send"></i></button>
+              <button class="ui-btn ui-btn-raised ui-btn-inline clr-primary waves-effect waves-button waves-effect waves-button" id="save">Guardar Artículo &nbsp;<i class="zmdi zmdi-mail-send"></i></button>
               <a href="index.html" data-ajax="false" class="ui-btn ui-btn-raised ui-btn-inline clr-warning waves-effect waves-button waves-effect waves-button">Cancelar</a>
             </div>
 
@@ -88,16 +93,23 @@
 
       <div data-role="content">
         <ul data-role="listview" data-icon="false" class="ui-listview" id="contactList" style="max-height:300px;overflow-y: scroll;">
-          <li class="ui-li-has-thumb">
-            <a href="#" class="ui-btn waves-effect waves-button waves-effect waves-button">
-              <h2>Ethel Chancy</h2>
-              <p>ehtel.chancy@example.com</p>
-            </a>
-          </li>
         </ul>
         
-        <a href="#" data-rel="back" data-role="button" data-inline="true" class="ui-btn ui-btn-primary"><i class='zmdi zmdi-cancel'></i>Cancel</a>
+        <a href="#" data-rel="back" data-role="button" data-inline="true" class="ui-btn ui-btn-raised clr-warning waves-effect waves-button waves-effect waves-button"><i class='zmdi zmdi-cancel'></i>Cancelar</a>
         
+      </div>
+    </div>
+
+    <div data-role="popup" id="userimg-popup">
+      <div data-role="header">
+        <h1>Cambiar Imagen</h1>
+      </div>
+      <div data-role="content">
+        <a id="userimg-camerabtn" href="#" data-role="button" class="ui-btn ui-btn-raised clr-primary waves-effect waves-button waves-effect waves-button">Desde cámara &nbsp;<i class='zmdi zmdi-camera'></i></a>
+        <br>
+        <a id="userimg-storagebtn" href="#" data-role="button" class="ui-btn ui-btn-raised clr-primary waves-effect waves-button waves-effect waves-button">Desde galería &nbsp;<i class='zmdi zmdi-folder'></i></a>
+        <br>
+        <a href="#" data-rel="back" data-role="button" class="ui-btn ui-btn-raised clr-warning waves-effect waves-button waves-effect waves-button"><i class='zmdi zmdi-cancel'></i>Cancelar</a>
       </div>
     </div>
 
@@ -140,6 +152,6 @@
     <script type="text/javascript" src="js/vc/geolocation.js"></script>
     <script type="text/javascript" src="js/vc/contacts.js"></script>
     <script type="text/javascript" src="js/vc/contactDetails.js"></script>
-    <!-- <script type="text/javascript" src="js/userimg.js"></script> -->
+    <script type="text/javascript" src="js/userimg.js"></script>
   </body>
 </html>

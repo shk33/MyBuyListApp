@@ -5,7 +5,6 @@
     e.preventDefault();
 
     $("#getCurrentPosition").on("tap", function (e) {
-      alert("putos");
       var callback = {};
 
       callback.onSuccess = onSuccess;
