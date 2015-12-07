@@ -9,6 +9,9 @@
     "installed_plugins": {
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.clase.buylist"
+        },
+        "cordova-plugin-datepicker": {
+            "PACKAGE_NAME": "com.clase.buylist"
         }
     },
     "dependent_plugins": {}
