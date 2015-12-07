@@ -7,7 +7,7 @@
   var calories = 0;
   var delta = 0.110;
 
-  $(document).on("pageinit", "#features", function (e) {
+  $(document).on("deviceready", function (e) {
     e.preventDefault();
 
     $("#startWatchAcceleration").on("tap", function (e) {

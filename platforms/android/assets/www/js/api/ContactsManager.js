@@ -7,7 +7,7 @@ var ContactsManager = (function () {
         var options = new ContactFindOptions();
         options.filter = filterText || "";
         options.multiple = true;
-        var fields = ["id","name","phoneNumbers"];
+        var fields = ["id","birthday","name","phoneNumbers"];
         navigator.contacts.find(fields, callback.onSuccess, callback.onError, options);
       }
     };

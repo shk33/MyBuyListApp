@@ -3,12 +3,18 @@
 <head>
   <title>My Buy List</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta charset="UTF-8">
 
   <link rel="stylesheet" href="css/font-awesome.min.css" />
   <link rel="stylesheet" href="css/jquery.mobile.min.css" />
   <link rel="stylesheet" href="vendor/waves/waves.min.css" />
   <link rel="stylesheet" href="vendor/wow/animate.css" />
   <link rel="stylesheet" href="css/nativedroid2.css" />
+
+  <style>
+    /* Prevent FOUC */
+    body { opacity: 0; }
+  </style>
 
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -26,7 +32,6 @@
     </div>
 
     <div data-role="header" data-position="fixed" class="wow fadeInDown" data-wow-delay="0.2s">
-      <a href="#bottomsheet" class="ui-btn ui-btn-right wow fadeIn" data-wow-delay='1.2s'><i class="zmdi zmdi-more-vert"></i></a>
       <a href="#leftpanel" class="ui-btn ui-btn-left wow fadeIn" data-wow-delay='0.8s'><i class="zmdi zmdi-menu"></i></a>
       <h1 class="wow fadeIn" data-wow-delay='0.4s'>Nuevo Artículo</h1>
     </div>
@@ -52,7 +57,7 @@
 
               <label for="for-person">
                 Regalo Para:
-                <button class="ui-btn-raised clr-primary ui-btn ui-btn-inline ui-mini waves-effect waves-button waves-effect waves-button" style="overflow: hidden;float:right;height: 16px;padding-top:1px;"><i class="zmdi zmdi-account-box-phone"></i></button>
+                <button class="ui-btn-raised clr-primary ui-btn ui-btn-inline ui-mini waves-effect waves-button waves-effect waves-button" style="overflow: hidden;float:right;height: 16px;padding-top:1px;"><i class="zmdi zmdi-account-box-phone" id="getContacts"></i></button>
               </label>
               <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset ui-input-has-clear"><input type="text" name="for-person" id="for-person" value="" data-clear-btn="true" placeholder="Regalo Para"><a href="#" tabindex="-1" aria-hidden="true" class="ui-input-clear ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all waves-effect waves-button waves-effect waves-button ui-input-clear-hidden" title="Clear text">Clear text</a>
               </div>
@@ -73,6 +78,27 @@
           </div>
       </div>
 
+    </div>
+
+    <div data-role="popup" id="popupDialog" data-history="false">
+  
+      <div data-role="header">
+        <h1>Contactos</h1>
+      </div>
+
+      <div data-role="content">
+        <ul data-role="listview" data-icon="false" class="ui-listview" id="contactList" style="max-height:300px;overflow-y: scroll;">
+          <li class="ui-li-has-thumb">
+            <a href="#" class="ui-btn waves-effect waves-button waves-effect waves-button">
+              <h2>Ethel Chancy</h2>
+              <p>ehtel.chancy@example.com</p>
+            </a>
+          </li>
+        </ul>
+        
+        <a href="#" data-rel="back" data-role="button" data-inline="true" class="ui-btn ui-btn-primary"><i class='zmdi zmdi-cancel'></i>Cancel</a>
+        
+      </div>
     </div>
 
     <script src="js/jquery.min.js"></script>
@@ -107,10 +133,13 @@
     <!-- API JS files -->
     <script type="text/javascript" src="js/api/AccelerometerManager.js"></script>        
     <script type="text/javascript" src="js/api/GeolocationManager.js"></script>        
+    <script type="text/javascript" src="js/api/ContactsManager.js"></script>        
                      
     <!-- View controller files -->      
-    <script type="text/javascript" src="js/vc/accelerometer.js"></script>                     
-    <script type="text/javascript" src="js/vc/geolocation.js"></script>                     
+    <script type="text/javascript" src="js/vc/accelerometer.js"></script>
+    <script type="text/javascript" src="js/vc/geolocation.js"></script>
+    <script type="text/javascript" src="js/vc/contacts.js"></script>
+    <script type="text/javascript" src="js/vc/contactDetails.js"></script>
     <!-- <script type="text/javascript" src="js/userimg.js"></script> -->
   </body>
 </html>
