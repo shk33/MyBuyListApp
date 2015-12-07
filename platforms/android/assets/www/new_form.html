@@ -62,16 +62,28 @@
 
               <label for="for-person">
                 Regalo Para:
-                <button class="ui-btn-raised clr-primary ui-btn ui-btn-inline ui-mini waves-effect waves-button waves-effect waves-button" style="overflow: hidden;float:right;height: 16px;padding-top:1px;"><i class="zmdi zmdi-account-box-phone" id="getContacts"></i></button>
               </label>
-              <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset ui-input-has-clear"><input type="text" name="for-person" id="for-person" value="" data-clear-btn="true" placeholder="Regalo Para"><a href="#" tabindex="-1" aria-hidden="true" class="ui-input-clear ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all waves-effect waves-button waves-effect waves-button ui-input-clear-hidden" title="Clear text">Clear text</a>
+              <div class="row">
+                  <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+                    <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset ui-input-has-clear"><input type="text" name="for-person" id="for-person" value="" data-clear-btn="true" placeholder="Regalo Para"><a href="#" tabindex="-1" aria-hidden="true" class="ui-input-clear ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all waves-effect waves-button waves-effect waves-button ui-input-clear-hidden" title="Clear text">Clear text</a>
+                    </div>
+                  </div>
+                  <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    <button class="ui-btn-raised clr-primary ui-btn ui-btn-inline ui-mini waves-effect waves-button waves-effect waves-button"><i class="zmdi zmdi-account-box-phone" id="getContacts"></i></button>
+                  </div>
               </div>
 
               <label for="localization">
                 Ubicación:
-                <button class="ui-btn-raised clr-primary ui-btn ui-btn-inline ui-mini waves-effect waves-button waves-effect waves-button" style="overflow: hidden;float:right;height: 16px;padding-top:1px;" id="getCurrentPosition"><i class="zmdi zmdi-pin"></i></button>
               </label>
-              <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset ui-input-has-clear"><input type="text" name="localization" id="localization" value="" data-clear-btn="true" placeholder="Ubicación"><a href="#" tabindex="-1" aria-hidden="true" class="ui-input-clear ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all waves-effect waves-button waves-effect waves-button ui-input-clear-hidden" title="Clear text">Clear text</a></div>
+              <div class="row">
+                <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+                  <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset ui-input-has-clear"><input type="text" name="localization" id="localization" value="" data-clear-btn="true" placeholder="Ubicación"><a href="#" tabindex="-1" aria-hidden="true" class="ui-input-clear ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all waves-effect waves-button waves-effect waves-button ui-input-clear-hidden" title="Clear text">Clear text</a></div>
+                </div>
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                  <button class="ui-btn-raised clr-primary ui-btn ui-btn-inline ui-mini waves-effect waves-button waves-effect waves-button" id="getCurrentPosition"><i class="zmdi zmdi-pin"></i></button>
+                </div>
+              </div>
 
               <label for="notes">Notas:</label>
               <textarea cols="40" rows="8" name="notes" id="notes" placeholder="Notas del artículo" class="ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all ui-textinput-autogrow" style="height: 66px;"></textarea>
