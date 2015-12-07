@@ -32,33 +32,45 @@
     </div>
 
     <div role="main" class="ui-content" data-inset="false">
-      <form>
         <div class="row">
           <div class="col-xs-12 col-sm-6 col-md-4">
             <div class="box">
               <label for="item-name">Nombre:</label>
-              <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset ui-input-has-clear"><input type="text" name="item-name" id="item-name" value="" data-clear-btn="true" placeholder="Precio"><a href="#" tabindex="-1" aria-hidden="true" class="ui-input-clear ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all waves-effect waves-button waves-effect waves-button ui-input-clear-hidden" title="Clear text">Clear text</a></div>
+              <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset ui-input-has-clear"><input type="text" name="item-name" id="item-name" value="" data-clear-btn="true" placeholder="Nombre"><a href="#" tabindex="-1" aria-hidden="true" class="ui-input-clear ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all waves-effect waves-button waves-effect waves-button ui-input-clear-hidden" title="Clear text">Clear text</a></div>
 
+              <div class="nd2-card">
+                <div class="card-media">
+                  <img src="img/placeholder.jpg">
+                </div>
+              </div>
+      
               <label for="price">Precio:</label>
               <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset ui-input-has-clear"><input type="text" name="price" id="price" value="" data-clear-btn="true" placeholder="Precio"><a href="#" tabindex="-1" aria-hidden="true" class="ui-input-clear ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all waves-effect waves-button waves-effect waves-button ui-input-clear-hidden" title="Clear text">Clear text</a></div>
 
               <label for="item-date">Fecha:</label>
-              <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset ui-input-has-clear"><input type="date" name="item-date" id="item-date" value="" data-clear-btn="true" placeholder=""><a href="#" tabindex="-1" aria-hidden="true" class="ui-input-clear ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all waves-effect waves-button waves-effect waves-button" title="Clear text">Clear text</a></div>
+              <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset ui-input-has-clear"><input type="date" name="item-date" id="item-date" value="" data-clear-btn="true" placeholder="Fecha"><a href="#" tabindex="-1" aria-hidden="true" class="ui-input-clear ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all waves-effect waves-button waves-effect waves-button" title="Clear text">Clear text</a></div>
 
-              <label for="for-person">Para:</label>
-              <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset ui-input-has-clear"><input type="text" name="for-person" id="for-person" value="" data-clear-btn="true" placeholder=""><a href="#" tabindex="-1" aria-hidden="true" class="ui-input-clear ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all waves-effect waves-button waves-effect waves-button ui-input-clear-hidden" title="Clear text">Clear text</a></div>
+              <label for="for-person">
+                Regalo Para:
+                <button class="ui-btn-raised clr-primary ui-btn ui-btn-inline ui-mini waves-effect waves-button waves-effect waves-button" style="overflow: hidden;float:right;height: 16px;padding-top:1px;"><i class="zmdi zmdi-account-box-phone"></i></button>
+              </label>
+              <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset ui-input-has-clear"><input type="text" name="for-person" id="for-person" value="" data-clear-btn="true" placeholder="Regalo Para"><a href="#" tabindex="-1" aria-hidden="true" class="ui-input-clear ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all waves-effect waves-button waves-effect waves-button ui-input-clear-hidden" title="Clear text">Clear text</a>
+              </div>
 
-              <label for="localization">Ubicación:</label>
-              <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset ui-input-has-clear"><input type="text" name="localization" id="localization" value="" data-clear-btn="true" placeholder=""><a href="#" tabindex="-1" aria-hidden="true" class="ui-input-clear ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all waves-effect waves-button waves-effect waves-button ui-input-clear-hidden" title="Clear text">Clear text</a></div>
+              <label for="localization">
+                Ubicación:
+                <button class="ui-btn-raised clr-primary ui-btn ui-btn-inline ui-mini waves-effect waves-button waves-effect waves-button" style="overflow: hidden;float:right;height: 16px;padding-top:1px;" id="getCurrentPosition"><i class="zmdi zmdi-pin"></i></button>
+              </label>
+              <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset ui-input-has-clear"><input type="text" name="localization" id="localization" value="" data-clear-btn="true" placeholder="Ubicación"><a href="#" tabindex="-1" aria-hidden="true" class="ui-input-clear ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all waves-effect waves-button waves-effect waves-button ui-input-clear-hidden" title="Clear text">Clear text</a></div>
 
               <label for="notes">Notas:</label>
               <textarea cols="40" rows="8" name="notes" id="notes" placeholder="Notas del artículo" class="ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all ui-textinput-autogrow" style="height: 66px;"></textarea>
 
-              <button class="ui-btn waves-effect waves-button waves-effect waves-button"><i class="zmdi zmdi-mail-send"></i>Guardar Artículo</button>
+              <button class="ui-btn ui-btn-raised ui-btn-inline clr-primary waves-effect waves-button waves-effect waves-button">Guardar Artículo &nbsp;<i class="zmdi zmdi-mail-send"></i></button>
+              <a href="index.html" data-ajax="false" class="ui-btn ui-btn-raised ui-btn-inline clr-warning waves-effect waves-button waves-effect waves-button">Cancelar</a>
             </div>
 
           </div>
-        </form>
       </div>
 
     </div>
@@ -71,5 +83,34 @@
     <script src="js/nativedroid2.js"></script>
     <script src="nd2settings.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
+    <script>
+        var deviceReadyDeferred = $.Deferred();
+        var jqmReadyDeferred = $.Deferred();
+                                                 
+        $(document).ready(function() {
+            document.addEventListener("deviceready", function() {
+                deviceReadyDeferred.resolve();
+            }, false);
+        });
+        
+        $(document).on("mobileinit", function () {
+            jqmReadyDeferred.resolve();
+        });
+                                                                   
+        $.when(deviceReadyDeferred, jqmReadyDeferred).then(function () {
+            
+            //Now everything loads fine, you can safely go to the app home ...
+            $.mobile.changePage("#features");
+            init();
+        });
+    </script>
+    <!-- API JS files -->
+    <script type="text/javascript" src="js/api/AccelerometerManager.js"></script>        
+    <script type="text/javascript" src="js/api/GeolocationManager.js"></script>        
+                     
+    <!-- View controller files -->      
+    <script type="text/javascript" src="js/vc/accelerometer.js"></script>                     
+    <script type="text/javascript" src="js/vc/geolocation.js"></script>                     
+    <!-- <script type="text/javascript" src="js/userimg.js"></script> -->
   </body>
-  </html>
+</html>

@@ -16,8 +16,7 @@
 
 	</head>
 	<body>
-
-		<div data-role="page">
+		<div data-role="page" id="main">
 
 			<nd2-include data-src="examples/fragments/panel.left.html"></nd2-include>
 
@@ -26,8 +25,8 @@
 			</div>
 
 			<div data-role="header" data-position="fixed" class="wow fadeInDown" data-wow-delay="0.2s">
-				<a href="#bottomsheet" class="ui-btn ui-btn-right wow fadeIn" data-wow-delay='1.2s'><i class="zmdi zmdi-more-vert"></i></a>
-				<a href="#leftpanel" class="ui-btn ui-btn-left wow fadeIn" data-wow-delay='0.8s'><i class="zmdi zmdi-menu"></i></a>
+				<!-- <a href="#bottomsheet" class="ui-btn ui-btn-right wow fadeIn" data-wow-delay='1.2s'><i class="zmdi zmdi-more-vert"></i></a> -->
+        <a href="#leftpanel" class="ui-btn ui-btn-left wow fadeIn" data-wow-delay='0.8s'><i class="zmdi zmdi-menu"></i></a>
 				<h1 class="wow fadeIn" data-wow-delay='0.0s'>My Buy List</h1>
 			</div>
 
@@ -73,5 +72,27 @@
 		<script src="js/nativedroid2.js"></script>
 		<script src="nd2settings.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
+    <script>
+            var deviceReadyDeferred = $.Deferred();
+            var jqmReadyDeferred = $.Deferred();
+                                                     
+            $(document).ready(function() {
+                document.addEventListener("deviceready", function() {
+                    deviceReadyDeferred.resolve();
+                }, false);
+            });
+            
+            $(document).on("mobileinit", function () {
+                jqmReadyDeferred.resolve();
+            });
+                                                                       
+            $.when(deviceReadyDeferred, jqmReadyDeferred).then(function () {
+                
+                //Now everything loads fine, you can safely go to the app home ...
+                $.mobile.changePage("#main");
+                init();
+            });
+        </script>
+    <script src="js/common.js"></script> 
 	</body>
 </html>
