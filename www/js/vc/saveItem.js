@@ -7,22 +7,27 @@
       e.preventDefault();
 
       if (localStorage.items) {
-        items = localStorage.items;
+        var items = JSON.parse(localStorage.items);
       } else {
-        items = [];
+        var items = [];
       }
 
+      // Create Item
       item = {
         name:      $('#item-name').val(),
         photo:     $("#userimg").attr("src"),
-        price:     $('price').val(),
-        date:      $('item-date').val(),
-        person:    $('for-person').val(),
-        ubication: $('localization').val(),
-        notes:     $('notes').val(),
+        price:     $('#price').val(),
+        date:      $('#item-date').val(),
+        person:    $('#for-person').val(),
+        ubication: $('#localization').val(),
+        notes:     $('#notes').val(),
       }
-
-      alert(item);
-      
+      // Add Item to array
+      items.push(item);
+      // Save Item in localStorage
+      localStorage.items = JSON.stringify(items);
+      console.log(item);
+      document.location.href = "index.html";
+    });
   });
 })();
