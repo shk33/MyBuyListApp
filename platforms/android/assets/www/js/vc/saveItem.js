@@ -23,14 +23,13 @@
         price:     $('#price').val(),
         date:      $('#item-date').val(),
         person:    $('#for-person').val(),
-        ubication: $('#localization').val(),
+        ubication: $('#localization').val(), //lat,long
         notes:     $('#notes').val(),
       }
       // Add Item to array
       items.push(item);
       // Save Item in localStorage
       localStorage.items = JSON.stringify(items);
-      console.log(item);
       document.location.href = "index.html";
     });
   });

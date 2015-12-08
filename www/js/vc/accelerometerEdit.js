@@ -27,6 +27,7 @@
         alert("El precio y el nombre son campos obligatorios");
         return;
       }
+
       if (localStorage.items) {
         var items = JSON.parse(localStorage.items);
       } else {
@@ -40,12 +41,16 @@
         price:     $('#price').val(),
         date:      $('#item-date').val(),
         person:    $('#for-person').val(),
-        ubication: $('#localization').val(), //lat,long
+        ubication: $('#localization').val(),
         notes:     $('#notes').val(),
+      }
+
+      if (itemID > -1) {
+        items.splice(itemID, 1);
       }
       // Add Item to array
       items.push(item);
-      // Save Item in localStorage
+      // Save Modified in localStorage
       localStorage.items = JSON.stringify(items);
       document.location.href = "index.html";
     }
