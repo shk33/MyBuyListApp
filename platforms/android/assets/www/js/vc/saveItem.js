@@ -6,6 +6,10 @@
     $("#save").on("tap", function (e, data) {
       e.preventDefault();
 
+      if ($('#item-name').val() == "" || $('#price').val() == "" ) {
+        alert("El precio y el nombre son campos obligatorios");
+        return;
+      }
       if (localStorage.items) {
         var items = JSON.parse(localStorage.items);
       } else {
