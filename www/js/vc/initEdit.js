@@ -33,9 +33,18 @@
         ubication: $('#localization').val(),
         notes:     $('#notes').val(),
       }
+
+      if (itemID > -1) {
+        items.splice(itemID, 1);
+        //After remove
+        console.log("After removes")
+        console.log(items)
+      }
       // Add Item to array
       items.push(item);
-      // Save Item in localStorage
+      console.log("After push item")
+      console.log(items)
+      // Save Modified in localStorage
       localStorage.items = JSON.stringify(items);
       console.log(item);
       document.location.href = "index.html";
